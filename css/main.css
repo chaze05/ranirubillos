@@ -132,6 +132,15 @@ header{
 	padding: 15px;
 }
 
+/* basic information */
+
+.about-section .basic-info .nav-item{
+	margin: 5px;
+}
+.about-section .basic-info .nav-item span:first-child{
+	display: inline-block;
+	width: 100px;
+}
 
 
 
