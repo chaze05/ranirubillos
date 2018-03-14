@@ -1,7 +1,7 @@
 $(document).ready(function(){
     new Typed('#expertise', {
-        strings: ['<strong>Front End Developer<strong> ', '<strong>Data Entry Specialist</strong> ', '<strong>Web Scraping Expert</strong> ', '<strong>Lead Generatoion Expert</strong> '],
-        typeSpeed: 30,
+        strings: ['<strong>Front End Developer<strong> ', '<strong>Data Entry Specialist</strong> ', '<strong>Web Scraping Expert</strong> ', '<strong>Lead Generation Expert</strong> '],
+        typeSpeed: 50,
         backSpeed: 40,
         smartBackspace: true,
         loop: true
