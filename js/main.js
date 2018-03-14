@@ -16,18 +16,17 @@ $(document).ready(function(){
 
     //  skills animation
     function runSkills(){
-
+        $('.progress-box').each(function(){
+            var myWidth = $(this).data('value');
+            $(this).find('.progress-bar').animate({'width':myWidth+"%"},2500);
+        })
     }
 
     // scroll reveal
     window.sr = ScrollReveal();
     sr.reveal('.skills-section', {duration:'1500',
-    afterReveal:         
-        $('.progress-box').each(function(){
-            var myWidth = $(this).data('value');
-            $(this).find('.progress-bar').animate({'width':myWidth+"%"},2500);
-        })
-    })
+    afterReveal: runSkills()
+    }, 1500)
     sr.reveal('.about-section', {duration: '1500'})
 
     // loader
