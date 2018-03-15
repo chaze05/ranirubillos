@@ -17,16 +17,27 @@ $(document).ready(function(){
     //  skills animation
     function runSkills(){
         $('.progress-box').each(function(){
-            var myWidth = $(this).data('value');
-            $(this).find('.progress-bar').animate({'width':myWidth+"%"},2500);
+        var myWidth = $(this).data('value');
+        $(this).find('.progress-bar').animate({'width':myWidth+"%"},2500);
         })
     }
+
+    $('.skills-section .container').viewportChecker({
+        callbackFunction:function(){
+            alert('visible')
+        }
+    });
 
     // scroll reveal
     window.sr = ScrollReveal();
     sr.reveal('.skills-section', {duration:'1500',
-    afterReveal: runSkills()
-    }, 1500)
+    beforeReveal: function(){
+            $('.progress-box').each(function(){
+            var myWidth = $(this).data('value');
+            $(this).find('.progress-bar').animate({'width':myWidth+"%"},2500);
+            })
+        }
+    })
     sr.reveal('.about-section', {duration: '1500'})
 
     // loader

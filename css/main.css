@@ -56,7 +56,7 @@ header .container .nav{
 	margin-top: 30px;
 }
 header .container .nav-item{
-	margin-right: 20px;
+	margin-right: 15px;
 }
 header .container .nav-item .nav-link{
 	position: relative;
@@ -165,12 +165,17 @@ section{
 	background-color: lightseagreen;
 }
 
+/* about section */
+.about-section .col-sm{
+	display: flex;
+	flex-direction: column
+}
 .about-section .col-sm > div{
 	margin: 20px 0;
 	background-color: #fff;
 	padding: 15px;
+	flex-grow: 1;
 }
-
 .about-section .myinterests{
 	background-color: #fff;
 	padding: 15px;
