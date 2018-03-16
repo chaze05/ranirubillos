@@ -57,6 +57,8 @@ $(document).ready(function(){
     })
     sr.reveal('.profile-info', {duration: '1500'})
     sr.reveal('.myinterests', {duration: '1500'})
+    sr.reveal('li:nth-child(odd) .exp-box', { origin:'right', distance:'-1000px',duration: '1500'})
+    sr.reveal('li:nth-child(even) .exp-box', { origin:'left', distance:'-1000px',duration: '1500'})
 
     // loader
     setTimeout(function(){ 
