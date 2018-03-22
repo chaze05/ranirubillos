@@ -85,6 +85,7 @@
                                 
                                 section {
                                     min-height: 400px;
+                                    overflow:hidden;
                                     padding: 30px 0;
                                 }
                                 /* for page overlay */
@@ -197,6 +198,30 @@
                                 .about-section .myinterests {
                                     background-color: #fff;
                                     padding: 15px;
+                                }
+
+                                .about-section .interest-box{
+                                    padding: 30px 0;
+                                    
+                                }
+                                .about-section .interest-box .icon-box{
+                                    margin-bottom:10px;
+                                    display: block;
+                                    transition: color .25s ease;
+                                    width:50%;
+                                    margin:auto;
+                                    height: 100px;
+                                    border: 1px solid lightseagreen;
+                                    border-radius:50%;
+                                    background-color: transparent;
+                                }
+                                .about-section .interest-box .icon-box:hover {
+                                    color: lightseagreen;
+                                    cursor: pointer;
+                                    transition: color .25s ease;
+                                }
+                                .about-section .interest-box small{
+                                    font-size:18px;;
                                 }
                                 /* basic information */
                                 
