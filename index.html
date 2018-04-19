@@ -565,7 +565,7 @@
                 </li>
             </ul>
             <div class="row portfolio-list">
-                <div class="col-md-4 col-sm-12 php-html psd-html item-box">
+                <div class="col-md-4 col-sm-12 php-html collab psd-html item-box">
                     <div class="d-flex">
                         <div class="w-100 align-self-center text-center info-overlay">
                             <a href="http://mbro.co.kr" target="_blank">
@@ -620,7 +620,7 @@
                 <div class="col-md-4 psd-html collab item-box">
                     <div class="d-flex">
                         <div class="w-100 align-self-center text-center info-overlay">
-                            <a href="http://towbmucic.com" target="_blank">
+                            <a href="http://towbmusic.com" target="_blank">
                                 <i class="fas fa-link"></i>
                             </a>
                             <h5 class="text-uppercase">
@@ -646,38 +646,69 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact bg-white">
         <div class="container">
             <h3 class="section-header text-uppercase">
                 contact me
             </h3>
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row contact-form">
+                <div class="col-md-5 col-sm-12 contact-info">
                     <div class="address">
-                        <span></span>
-                        Olongapo CIty, Philipines
+                        <span class="icon">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </span>
+                        <span>Olongapo CIty, Philipines</span>
                     </div>
                     <div class="contact">
-                        <span></span>
+                        <span class="icon">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </span>
                         <span>Work: 09168493019</span>
                         <span>Home: 09565562730</span>
                     </div>
-                    <div class="email"></div>
+                    <div class="email">
+                        <span class="icon">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
                         <span>Personal Email: rr030591@gmail.com</span>
                         <span>Work Email: priranirubillos@gmail.com</span>
                     </div>
                     <div class="avail">
+                        <span class="icon">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </span>
                         <span>Monday - Friday 9am-12pm, 1pm - 5pm</span>
                         <span>Saturday 10am - 12pm 1pm - 2pm</span>
                     </div>
                 </div>
+                <div class="col-md-7 col-sm-12">
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                          <label for="text">Full Name</label>
+                          <input type="text" class="form-control" id="name" placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Email address:</label>
+                          <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Message</label>
+                          <textarea name="message" id="message" class="form-control" cols="10" rows="5" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-green">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
-
+    
+    <footer>
+        <div class="container text-center">
+            <span class="text-capitalize">rani moreles rubillos</span>
+        </div>
+    </footer>
     <!-- make reveal calls last -->
 
-    <footer></footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
