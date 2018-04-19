@@ -548,79 +548,132 @@
                 portfolio
             </h3>
             <ul class="nav justify-content-center text-uppercase project-items">
-                <li class="nav-item mr-15">
+                <li class="nav-item mr-15 active" >
                     <h5 data-filter="*">all</h5>
                 </li>
-                <li class="nav-item mr-15">
-                    <h5>wordpress</h5>
+                <li class="nav-item mr-15"  data-filter=".collab">
+                    <h5>collaborations</h5>
                 </li>
-                <li class="nav-item mr-15">
+                <li class="nav-item mr-15" data-filter=".psd-html">
                     <h5>psd to html</h5>
                 </li>
-                <li class="nav-item mr-15">
+                <li class="nav-item mr-15" data-filter=".php-html">
                     <h5>php</h5>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item"  data-filter="admin">
                     <h5>web scraping</h5>
                 </li>
             </ul>
             <div class="row portfolio-list">
-                <div class="col">
+                <div class="col-md-4 col-sm-12 php-html psd-html item-box">
                     <div class="d-flex">
                         <div class="w-100 align-self-center text-center info-overlay">
-                            <a href="http://mbro.co.kr">
+                            <a href="http://mbro.co.kr" target="_blank">
                                 <i class="fas fa-link"></i>
                             </a>
                             <h5 class="text-uppercase">
                                 mbro
                             </h5>
                         </div>
-                        <img src="img/mbro.png" alt="">
+                        <img src="img/mbro.png" alt="" class="img-fluid">
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-md-4 col-sm-12 psd-html item-box">
                     <div class="d-flex">
                         <div class="w-100 align-self-center text-center info-overlay">
-                            <a href="#">
+                            <a href="http://b2motion.com" target="_blank">
                                 <i class="fas fa-link"></i>
                             </a>
                             <h5 class="text-uppercase">
                                 b2motion
                             </h5>
                         </div>
-                        <img src="img/b2motion.jpg" alt="" class="img-responsive">
+                        <img src="img/b2motion.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-md-4 col-sm-12 psd-html item-box">
                     <div class="d-flex">
                         <div class="w-100 align-self-center text-center info-overlay">
-                            <a href="http://gfplant.com">
+                            <a href="http://gfplant.com" target="_blank">
                                 <i class="fas fa-link"></i>
                             </a>
                             <h5 class="text-uppercase">
                                 gfplant
                             </h5>
                         </div>
-                        <img src="img/gfplant.jpg" alt="">
+                        <img src="img/gfplant.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-md-4 psd-html item-box">
                     <div class="d-flex">
                         <div class="w-100 align-self-center text-center info-overlay">
-                            <a href="http://themarinus.com">
+                            <a href="http://themarinus.com" target="_blank">
                                 <i class="fas fa-link"></i>
                             </a>
                             <h5 class="text-uppercase">
                                 the marinus
                             </h5>
                         </div>
-                        <img src="img/themarinus.jpg" alt="">
+                        <img src="img/themarinus.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-4 psd-html collab item-box">
+                    <div class="d-flex">
+                        <div class="w-100 align-self-center text-center info-overlay">
+                            <a href="http://towbmucic.com" target="_blank">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <h5 class="text-uppercase">
+                                towbmusic
+                            </h5>
+                        </div>
+                        <img src="img/about.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-4 psd-html item-box">
+                    <div class="d-flex">
+                        <div class="w-100 align-self-center text-center info-overlay">
+                            <a href="#" target="_blank">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <h5 class="text-uppercase">
+                                allico
+                            </h5>
+                        </div>
+                        <img src="img/ico.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    <section class="contact">
+        <div class="container">
+            <h3 class="section-header text-uppercase">
+                contact me
+            </h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="address">
+                        <span></span>
+                        Olongapo CIty, Philipines
+                    </div>
+                    <div class="contact">
+                        <span></span>
+                        <span>Work: 09168493019</span>
+                        <span>Home: 09565562730</span>
+                    </div>
+                    <div class="email"></div>
+                        <span>Personal Email: rr030591@gmail.com</span>
+                        <span>Work Email: priranirubillos@gmail.com</span>
+                    </div>
+                    <div class="avail">
+                        <span>Monday - Friday 9am-12pm, 1pm - 5pm</span>
+                        <span>Saturday 10am - 12pm 1pm - 2pm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- make reveal calls last -->
 
@@ -645,6 +698,22 @@
     <!-- scroll reveal js -->
     <script src="js/main.js"></script>
     <script>
+        $grid=$('.portfolio-list');
+        $grid.isotope({
+        // options
+            itemSelector: '.item-box',
+            layoutMode: 'fitRows'
+        });
+        var filter = $('.project-items .nav-item');
+        filter.on( 'click', function() {
+            console.log('1');
+            filter.removeClass('active');
+            $(this).addClass('active');
+            var filterValue = $( this ).attr('data-filter');
+            // use filterFn if matches value
+            $grid.isotope({ filter: filterValue });
+        });
+
     </script>
 </body>
 
