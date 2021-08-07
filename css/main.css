@@ -454,7 +454,9 @@ section {
 .portfolio-list .d-flex:hover .w-100 h5 {
 	color: #fff;
 }
-
+.portfolio-list .d-flex img{
+	margin: 0 auto;
+}
 .contact .contact-form{
     margin:30px 0;
 }
