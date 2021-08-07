@@ -12,15 +12,14 @@ $(document).ready(function() {
     $('.bar-container').on('click', function() {
         $('.menu-container').toggleClass('active');
     })
-
-
     //  skills animation
-    function runSkills() {
-        $('.progress-box').each(function() {
-            var myWidth = $(this).data('value');
-            $(this).find('.progress-bar').animate({ 'width': myWidth + "%" }, 2500);
-        })
-    }
+    // function runSkills() {
+    //     $('.progress-box').each(function() {
+    //         var myWidth = $(this).data('value');
+    //         $(this).find('.progress-bar').animate({ 'width': myWidth + "%" }, 2500).find();
+
+    //     })
+    // }
 
     $('.skills-section .container').viewportChecker({
         callbackFunction: function() {
@@ -37,7 +36,7 @@ $(document).ready(function() {
         beforeReveal: function() {
             $('.progress-box').each(function() {
                 var myWidth = $(this).data('value');
-                $(this).find('.progress-bar').animate({ 'width': myWidth + "%" }, 2500);
+                $(this).find('.progress-bar').animate({ 'width': myWidth + "%" }, 3500).text(myWidth + "%" );
             })
         }
     })
@@ -72,4 +71,18 @@ $(document).ready(function() {
             zIndex: '0'
         });
     }, 500);
+
+    $(".profileList a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 300, function () {
+                window.location.hash = hash;
+            });
+        }
+        $('.menu-container').toggleClass('active');
+    });
+    
 });

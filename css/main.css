@@ -1,7 +1,9 @@
-*==========================================================================
+/*==========================================================================
     Author's custom styles
 ==========================================================================*/
-
+html {
+  scroll-behavior: smooth;
+}
 .np {
 	padding: 0;
 }
@@ -157,6 +159,20 @@ section {
 	bottom: -5px;
 	background-color: lightseagreen;
 }
+
+.profileList ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.profileList ul li a{
+	display: block;
+    color: white;
+    font-size: 25px;
+    padding: 10px 5px;
+	text-decoration: none;
+}
+
 /* about section */
 
 .about-section .col-sm {
@@ -214,7 +230,7 @@ section {
 }
 .skills-section .progress-box {
 	display: block;
-	height: 4px;
+	height: 6px;
 	border: 1px solid lightseagreen;
 	border-radius: 2px;
 	position: relative;
@@ -222,8 +238,21 @@ section {
 .skills-section .progress-box .progress-bar {
 	display: block;
 	width: 0;
-	height: 3px;
+	height: 5px;
 	background-color: lightseagreen;
+	position: relative;
+	color: green;
+	text-align: right;
+	transition: width .5s ease-in-out;
+}
+.skills-section .progress-box .value{
+	position: relative;
+	left: 0;
+	color: red; 
+	padding: 1px 2px;
+	border-radius: 5px;
+	display: block;
+	top: 5px;
 }
 .skills-section .col-sm {
 	margin-top: 30px;
@@ -235,7 +264,7 @@ section {
 	margin-bottom: 5px;
 }
 .skills-section .skills-animation .col-12 {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 .skills-section .skills-delivered {
 	text-align: center;
